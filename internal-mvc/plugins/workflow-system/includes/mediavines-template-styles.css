@@ -1,0 +1,241 @@
+/**
+ * Media Vines Template System - Styles
+ */
+
+/* Template Section Container */
+#template-section {
+    padding: 0;
+}
+
+.template-selection-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.template-selection-header p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Entry Mode Toggle */
+#entry-mode-toggle {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#use-template-toggle,
+#use-template-toggle:hover,
+#use-template-toggle:focus {
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: all 0.2s ease;
+}
+
+#use-template-toggle:hover {
+    opacity: 0.8;
+}
+
+/* Template Form Groups */
+#template-section .form-group {
+    margin-bottom: 20px;
+}
+
+#template-section .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+}
+
+#template-section .form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+#template-section .form-control:focus {
+    outline: none;
+    border-color: #D4AF37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+/* Template Tasks Preview */
+#template-tasks-preview {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+}
+
+#template-tasks-preview h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+#template-tasks-list {
+    margin-top: 15px;
+}
+
+/* Template Task Items */
+.template-task-item {
+    transition: all 0.2s ease;
+}
+
+.template-task-item:hover {
+    border-color: #D4AF37 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.template-task-item strong {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.template-task-item p {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.template-task-assignment {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 13px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.template-task-assignment:focus {
+    outline: none;
+    border-color: #D4AF37;
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.1);
+}
+
+/* Modal Actions */
+#template-section .modal-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+#back-to-manual {
+    background: #f5f5f5;
+    color: #666;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#back-to-manual:hover {
+    background: #e8e8e8;
+    color: #333;
+}
+
+#create-from-template {
+    background: #D4AF37;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#create-from-template:hover:not(:disabled) {
+    background: #c49d2e;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#create-from-template:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Admin Template Column */
+.column-is_template {
+    width: 150px;
+}
+
+/* Template Meta Box */
+#workflow_template_settings {
+    font-size: 13px;
+}
+
+#workflow_template_settings p {
+    margin: 0 0 12px 0;
+}
+
+#workflow_template_settings label {
+    font-size: 13px;
+}
+
+#workflow_template_settings .description {
+    font-size: 12px;
+    font-style: italic;
+    color: #666;
+}
+
+#workflow_template_settings hr {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #eee;
+}
+
+#workflow_template_settings small {
+    color: #666;
+}
+
+/* Duplicate Button */
+.misc-pub-section a.button {
+    display: block;
+    text-decoration: none;
+}
+
+/* Admin Template Filter */
+select[name="template_filter"] {
+    min-width: 150px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .template-task-item > div {
+        flex-direction: column !important;
+    }
+    
+    .template-task-item .template-task-assignment {
+        margin-left: 0 !important;
+        margin-top: 10px;
+        min-width: 100% !important;
+    }
+    
+    #template-section .modal-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #back-to-manual,
+    #create-from-template {
+        width: 100%;
+    }
+}

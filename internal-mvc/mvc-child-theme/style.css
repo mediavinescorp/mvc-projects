@@ -1,0 +1,56 @@
+/*
+Theme Name: MVC Child Theme
+Template: twentytwentyfive
+Description: Child theme for Twenty Twenty Five
+Version: 1.0
+*/
+
+/* Parent theme styles */
+/* (Any existing code stays here) */
+
+/* ============================================
+   MVC Intranet - Search Bar Layout Fix
+   ============================================ */
+
+/* Desktop: Limit search bar width */
+@media (min-width: 769px) {
+    .resources-filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .resources-filters input[type="text"],
+    .resources-filters input[type="search"] {
+        max-width: 400px !important;
+        flex: 0 1 400px;
+        margin-right: 15px;
+    }
+    
+    .resources-filters select {
+        max-width: 200px;
+        flex: 0 1 200px;
+    }
+}
+
+/* Mobile: Stack vertically, full width */
+@media (max-width: 768px) {
+    .resources-filters {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+    
+    .resources-filters input,
+    .resources-filters select,
+    .resources-filters button {
+        width: 100% !important;
+        max-width: 100% !important;
+        font-size: 16px !important;
+        min-height: 44px;
+        padding: 12px;
+    }
+}
+

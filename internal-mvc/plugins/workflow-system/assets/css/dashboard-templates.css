@@ -1,0 +1,504 @@
+/**
+ * Dashboard Template Integration Styles
+ * Media Vines Corp - Gold (#D4AF37) and Black Theme
+ */
+
+/* ============================================
+   TEMPLATE SELECTION SECTION
+   ============================================ */
+.template-selection-section {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.section-header {
+    margin-bottom: 25px;
+}
+
+.section-header h3 {
+    margin: 0 0 8px 0;
+    font-size: 22px;
+    color: #000;
+    font-weight: 600;
+}
+
+.section-description {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* ============================================
+   TEMPLATE GRID
+   ============================================ */
+.template-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.template-card {
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.template-card:hover {
+    border-color: #D4AF37;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Template Card Header */
+.template-card-header {
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.template-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: #D4AF37;
+    border-radius: 50%;
+}
+
+.template-icon .dashicons {
+    color: #000;
+    font-size: 20px;
+}
+
+.template-category-badge {
+    padding: 4px 12px;
+    background: #D4AF37;
+    color: #000;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* Template Card Body */
+.template-card-body {
+    padding: 20px;
+    flex: 1;
+}
+
+.template-card-body h4 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    line-height: 1.3;
+}
+
+.template-description {
+    margin: 0 0 15px 0;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.template-meta {
+    display: flex;
+    gap: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.template-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+.template-meta-item .dashicons {
+    color: #D4AF37;
+    font-size: 16px;
+}
+
+/* Template Card Footer */
+.template-card-footer {
+    padding: 15px 20px;
+    background: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    gap: 10px;
+}
+
+.template-card-footer .button {
+    flex: 1;
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.template-card-footer .button-primary {
+    background: #D4AF37;
+    border-color: #D4AF37;
+    color: #000;
+}
+
+.template-card-footer .button-primary:hover {
+    background: #c09a2b;
+    border-color: #c09a2b;
+}
+
+.template-card-footer .button-secondary {
+    background: #fff;
+    border-color: #000;
+    color: #000;
+}
+
+.template-card-footer .button-secondary:hover {
+    background: #f5f5f5;
+}
+
+/* ============================================
+   TEMPLATE PREVIEW MODAL
+   ============================================ */
+.template-preview-content {
+    max-width: 700px;
+}
+
+.preview-section {
+    margin-bottom: 30px;
+}
+
+.preview-section:last-child {
+    margin-bottom: 0;
+}
+
+.preview-section h3 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #D4AF37;
+}
+
+.preview-section p {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Execution Mode Display */
+.execution-mode-display {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-left: 4px solid #D4AF37;
+    border-radius: 4px;
+}
+
+.execution-mode-icon {
+    width: 40px;
+    height: 40px;
+    background: #D4AF37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.execution-mode-icon .dashicons {
+    color: #000;
+    font-size: 20px;
+}
+
+.execution-mode-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+}
+
+.execution-mode-info p {
+    margin: 0;
+    font-size: 13px;
+    color: #666;
+}
+
+/* Preview Tasks List */
+.preview-tasks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.preview-task-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.preview-task-item:hover {
+    background: #fff;
+    border-color: #D4AF37;
+}
+
+.preview-task-number {
+    width: 32px;
+    height: 32px;
+    background: #D4AF37;
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.preview-task-content {
+    flex: 1;
+}
+
+.preview-task-title {
+    margin: 0 0 5px 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+}
+
+.preview-task-description {
+    margin: 0 0 10px 0;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.preview-task-meta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.preview-task-badge {
+    padding: 4px 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #666;
+}
+
+.preview-task-badge.priority-critical {
+    background: #dc3232;
+    color: #fff;
+    border-color: #dc3232;
+}
+
+.preview-task-badge.priority-high {
+    background: #ff8800;
+    color: #fff;
+    border-color: #ff8800;
+}
+
+.preview-task-badge.priority-medium {
+    background: #D4AF37;
+    color: #000;
+    border-color: #D4AF37;
+}
+
+.preview-task-badge.priority-low {
+    background: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+}
+
+.preview-task-badge.has-dependency {
+    background: #f0f0f0;
+    border-color: #ddd;
+}
+
+.preview-task-badge.has-dependency .dashicons {
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+/* ============================================
+   MODAL ENHANCEMENTS
+   ============================================ */
+.wfs-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999999;
+}
+
+.wfs-modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    z-index: 1000000;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.wfs-modal-header {
+    padding: 25px 30px;
+    border-bottom: 2px solid #D4AF37;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+}
+
+.wfs-modal-header h2 {
+    margin: 0;
+    color: #D4AF37;
+    font-size: 24px;
+}
+
+.wfs-modal-close {
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+    transition: all 0.2s;
+}
+
+.wfs-modal-close:hover {
+    background: #D4AF37;
+    color: #000;
+}
+
+.wfs-modal-body {
+    padding: 30px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.wfs-modal-footer {
+    padding: 20px 30px;
+    border-top: 1px solid #e0e0e0;
+    background: #f9f9f9;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.wfs-modal-footer .button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ============================================
+   LOADING STATES
+   ============================================ */
+.template-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    color: #666;
+}
+
+.template-loading .spinner {
+    margin-bottom: 15px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .template-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .template-card-footer {
+        flex-direction: column;
+    }
+    
+    .template-card-footer .button {
+        width: 100%;
+    }
+    
+    .wfs-modal-content {
+        max-width: 95vw;
+        max-height: 95vh;
+    }
+    
+    .wfs-modal-header,
+    .wfs-modal-body,
+    .wfs-modal-footer {
+        padding: 20px;
+    }
+    
+    .preview-task-meta {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.template-card {
+    animation: fadeIn 0.3s ease;
+}
+
+.template-card:nth-child(1) { animation-delay: 0.05s; }
+.template-card:nth-child(2) { animation-delay: 0.1s; }
+.template-card:nth-child(3) { animation-delay: 0.15s; }
+.template-card:nth-child(4) { animation-delay: 0.2s; }
+.template-card:nth-child(5) { animation-delay: 0.25s; }
+.template-card:nth-child(6) { animation-delay: 0.3s; }

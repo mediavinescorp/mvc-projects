@@ -1,0 +1,253 @@
+{
+    "key": "group_wfs_task",
+    "title": "Task Details",
+    "fields": [
+        {
+            "key": "field_task_workflow",
+            "label": "Workflow",
+            "name": "task_workflow",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "Select the workflow this task belongs to",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "wfs_workflow"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_task_assigned_user",
+            "label": "Assigned To",
+            "name": "task_assigned_user",
+            "aria-label": "",
+            "type": "user",
+            "instructions": "Select the user assigned to this task",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "role": [
+                "wfs_team_member",
+                "wfs_supervisor",
+                "wfs_admin",
+                "administrator"
+            ],
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_task_status",
+            "label": "Status",
+            "name": "task_status",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "assigned": "Assigned",
+                "in_progress": "In Progress",
+                "waiting": "Waiting",
+                "needs_info": "Needs Info",
+                "awaiting_external": "Awaiting External",
+                "needs_approval": "Needs Approval",
+                "completed": "Completed"
+            },
+            "default_value": "assigned",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_task_due_date",
+            "label": "Due Date",
+            "name": "task_due_date",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "When should this task be completed?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "Y-m-d",
+            "first_day": 1
+        },
+        {
+            "key": "field_task_start_date",
+            "label": "Start Date",
+            "name": "task_start_date",
+            "aria-label": "",
+            "type": "date_time_picker",
+            "instructions": "Automatically set on creation",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y g:i a",
+            "return_format": "Y-m-d H:i:s",
+            "first_day": 1,
+            "readonly": 1
+        },
+        {
+            "key": "field_task_notes",
+            "label": "Notes & Updates",
+            "name": "task_notes",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Conversation thread for this task",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Note",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_note_content",
+                    "label": "Note",
+                    "name": "note_content",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_task_notes"
+                },
+                {
+                    "key": "field_note_user",
+                    "label": "User",
+                    "name": "note_user",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "readonly": 1,
+                    "parent_repeater": "field_task_notes"
+                },
+                {
+                    "key": "field_note_timestamp",
+                    "label": "Timestamp",
+                    "name": "note_timestamp",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "readonly": 1,
+                    "parent_repeater": "field_task_notes"
+                }
+            ]
+        },
+        {
+            "key": "field_task_activity_log",
+            "label": "Activity Log",
+            "name": "task_activity_log",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Automatically tracks all task changes",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 6,
+            "placeholder": "",
+            "new_lines": "",
+            "readonly": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "wfs_task"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0
+}

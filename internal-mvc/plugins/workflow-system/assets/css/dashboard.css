@@ -1,0 +1,2031 @@
+/**
+ * Workflow Dashboard Styles - Phase 2A Part 3
+ * Brand Colors: Gold (#D4AF37) and Black (#000000)
+ */
+
+/* CSS Variables */
+:root {
+    --gold: #D4AF37;
+    --gold-dark: #B8941F;
+    --gold-light: #E5C96F;
+    --black: #000000;
+    --gray-dark: #1a1a1a;
+    --gray-medium: #333333;
+    --gray-light: #666666;
+    --gray-lighter: #999999;
+    --gray-lightest: #f5f5f5;
+    --white: #ffffff;
+    --red: #dc3232;
+    --green: #46b450;
+    --blue: #0073aa;
+    --orange: #f56e28;
+    
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+/* Dashboard Wrapper */
+.wfs-dashboard-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: var(--white);
+}
+
+/* Dashboard Header */
+.wfs-dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--gold);
+}
+
+.wfs-dashboard-header h1 {
+    margin: 0;
+    color: var(--black);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.wfs-user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.wfs-username {
+    font-size: 16px;
+    color: var(--gray-dark);
+    font-weight: 500;
+}
+
+.wfs-role-badge {
+    background: var(--gold);
+    color: var(--black);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Tab Navigation */
+.wfs-tabs-nav {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--gray-lightest);
+}
+
+.wfs-tab-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 24px;
+    border: none;
+    background: transparent;
+    color: var(--gray-light);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border-bottom: 3px solid transparent;
+    position: relative;
+    top: 2px;
+}
+
+.wfs-tab-button:hover {
+    color: var(--gold);
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.wfs-tab-button.active {
+    color: var(--black);
+    border-bottom-color: var(--gold);
+    background: rgba(212, 175, 55, 0.05);
+}
+
+.tab-icon {
+    font-size: 18px;
+}
+
+/* Tab Panels */
+.wfs-tab-panel {
+    display: none;
+}
+
+.wfs-tab-panel.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Section Header */
+.wfs-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.wfs-section-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: var(--black);
+    font-weight: 700;
+}
+
+.wfs-task-count,
+.wfs-workflow-count {
+    background: var(--gray-lightest);
+    color: var(--gray-dark);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Empty State */
+.wfs-empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    background: var(--gray-lightest);
+    border-radius: var(--border-radius);
+}
+
+.empty-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.wfs-empty-state h3 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    color: var(--gray-dark);
+}
+
+.wfs-empty-state p {
+    margin: 0;
+    color: var(--gray-light);
+    font-size: 16px;
+}
+
+/* MY TASKS - Task List */
+.wfs-task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.wfs-task-item {
+    background: var(--white);
+    border: 2px solid var(--gray-lightest);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.wfs-task-item:hover {
+    border-color: var(--gold);
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.15);
+}
+
+.wfs-task-collapsed {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.task-status-icon {
+    font-size: 24px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--gray-lightest);
+    flex-shrink: 0;
+}
+
+.task-status-icon.status-in_progress,
+.task-status-icon.status-in-progress {
+    background: rgba(0, 115, 170, 0.1);
+    color: var(--blue);
+}
+
+.task-status-icon.status-completed,
+.task-status-icon.status-complete {
+    background: rgba(70, 180, 80, 0.1);
+    color: var(--green);
+}
+
+.task-main-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-title {
+    margin: 0 0 6px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.task-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--gray-light);
+    flex-wrap: wrap;
+}
+
+.task-meta span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.task-status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.task-status-badge.status-assigned {
+    background: var(--gray-lightest);
+    color: var(--gray-light);
+}
+
+.task-status-badge.status-in_progress,
+.task-status-badge.status-in-progress {
+    background: rgba(0, 115, 170, 0.1);
+    color: var(--blue);
+}
+
+.task-status-badge.status-waiting {
+    background: rgba(245, 110, 40, 0.1);
+    color: var(--orange);
+}
+
+.task-status-badge.status-needs_info,
+.task-status-badge.status-needs-info {
+    background: rgba(245, 110, 40, 0.1);
+    color: var(--orange);
+}
+
+.task-status-badge.status-awaiting_external {
+    background: rgba(245, 110, 40, 0.1);
+    color: var(--orange);
+}
+
+.task-status-badge.status-needs_approval {
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--gold-dark);
+}
+
+.task-status-badge.status-completed,
+.task-status-badge.status-complete {
+    background: rgba(70, 180, 80, 0.1);
+    color: var(--green);
+}
+
+.task-expand-btn {
+    background: var(--gray-lightest);
+    border: none;
+    color: var(--gray-light);
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.task-expand-btn:hover {
+    background: var(--gold);
+    color: var(--white);
+}
+
+.wfs-task-item.expanded .task-expand-btn {
+    transform: rotate(90deg);
+}
+
+/* Task Expanded View */
+.wfs-task-expanded {
+    padding: 0 16px 16px 16px;
+    border-top: 1px solid var(--gray-lightest);
+    margin-top: 16px;
+}
+
+.task-detail-content {
+    padding-top: 16px;
+}
+
+.task-description {
+    margin-bottom: 20px;
+    color: var(--gray-dark);
+    line-height: 1.6;
+}
+
+.task-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    background: var(--gray-lightest);
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.task-actions label {
+    font-weight: 600;
+    color: var(--gray-dark);
+    font-size: 14px;
+}
+
+.task-status-select {
+    padding: 10px;
+    border: 2px solid var(--gray-lightest);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    background: var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.task-status-select:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.task-note-input {
+    padding: 12px;
+    border: 2px solid var(--gray-lightest);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    transition: var(--transition);
+}
+
+.task-note-input:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+/* Task Notes History */
+.task-notes-history,
+.task-assignment-history {
+    margin-top: 20px;
+}
+
+.task-notes-history h5,
+.task-assignment-history h5 {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gray-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.task-note-item,
+.assignment-history-item {
+    padding: 12px;
+    background: var(--gray-lightest);
+    border-left: 3px solid var(--gold);
+    border-radius: var(--border-radius);
+    margin-bottom: 8px;
+}
+
+.assignment-history-item {
+    border-left-color: var(--blue);
+}
+
+.note-header,
+.assignment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.note-header strong,
+.assignment-users {
+    color: var(--black);
+    font-weight: 600;
+}
+
+.note-date,
+.assignment-date {
+    color: var(--gray-light);
+}
+
+.note-content,
+.assignment-note {
+    color: var(--gray-dark);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.task-reassign-select {
+    padding: 10px;
+    border: 2px solid var(--gray-lightest);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    background: var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.task-reassign-select:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+/* MONITORING - Workflow List */
+.wfs-workflow-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.wfs-workflow-card {
+    background: var(--white);
+    border: 2px solid var(--gray-lightest);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    transition: var(--transition);
+}
+
+.wfs-workflow-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.15);
+}
+
+.workflow-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--gray-lightest);
+}
+
+.workflow-title-section {
+    flex: 1;
+}
+
+.workflow-title {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.workflow-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: var(--gray-light);
+}
+
+.workflow-tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Monitoring Task Items - Expandable */
+.monitoring-task-item {
+    background: var(--white);
+    border: 2px solid var(--gray-lightest);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.monitoring-task-item:hover {
+    border-color: var(--gold-light);
+}
+
+.monitoring-task-item.expanded {
+    border-color: var(--gold);
+}
+
+.monitoring-task-collapsed {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    cursor: pointer;
+    background: var(--gray-lightest);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.monitoring-task-collapsed:hover {
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.monitoring-task-expand-btn {
+    margin-left: auto;
+    background: var(--white);
+    border: 1px solid var(--gray-lightest);
+    color: var(--gray-light);
+    font-size: 16px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.monitoring-task-expand-btn:hover {
+    background: var(--gold);
+    color: var(--white);
+    border-color: var(--gold);
+}
+
+.monitoring-task-item.expanded .monitoring-task-expand-btn {
+    transform: rotate(90deg);
+}
+
+.monitoring-task-expanded {
+    padding: 16px;
+    border-top: 1px solid var(--gray-lightest);
+}
+
+.task-detail-content.readonly {
+    background: var(--gray-lightest);
+    padding: 16px;
+    border-radius: var(--border-radius);
+}
+
+.task-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+    padding: 12px;
+    background: var(--white);
+    border-radius: var(--border-radius);
+}
+
+.task-info-item {
+    font-size: 14px;
+    color: var(--gray-dark);
+}
+
+.task-info-item strong {
+    color: var(--black);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.readonly .task-assignment-history,
+.readonly .task-notes-history {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--gray-light);
+}
+
+.task-icon {
+    font-size: 16px;
+}
+
+.task-name {
+    flex: 1;
+    font-weight: 500;
+    color: var(--gray-dark);
+}
+
+.task-status-label {
+    color: var(--gray-light);
+    font-size: 13px;
+}
+
+.task-assignee {
+    color: var(--gray-light);
+    font-size: 13px;
+}
+
+/* ARCHIVE - Workflow Cards */
+.wfs-archive-workflow-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.wfs-archive-workflow-card {
+    background: var(--white);
+    border: 2px solid var(--gray-lightest);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    transition: var(--transition);
+}
+
+.wfs-archive-workflow-card:hover {
+    border-color: var(--gold-light);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.1);
+}
+
+.archive-workflow-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--gray-lightest);
+}
+
+.archive-workflow-title-section {
+    flex: 1;
+}
+
+.archive-workflow-title {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gray-dark);
+}
+
+.archive-workflow-meta {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-size: 14px;
+    color: var(--gray-light);
+    margin-bottom: 8px;
+}
+
+.cancellation-reason {
+    margin-top: 12px;
+    padding: 12px;
+    background: rgba(220, 50, 50, 0.05);
+    border-left: 3px solid var(--red);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    color: var(--gray-dark);
+}
+
+.archive-workflow-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.archive-workflow-tasks {
+    margin-top: 16px;
+}
+
+.tasks-header {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gray-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Archive Task Items - Expandable */
+.archive-task-item {
+    background: var(--white);
+    border: 2px solid var(--gray-lightest);
+    border-radius: var(--border-radius);
+    margin-bottom: 8px;
+    transition: var(--transition);
+}
+
+.archive-task-item:hover {
+    border-color: var(--gold-light);
+}
+
+.archive-task-item.expanded {
+    border-color: var(--gold);
+}
+
+.archive-task-collapsed {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    cursor: pointer;
+    background: var(--gray-lightest);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.archive-task-collapsed:hover {
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.archive-task-expand-btn {
+    margin-left: auto;
+    background: var(--white);
+    border: 1px solid var(--gray-lightest);
+    color: var(--gray-light);
+    font-size: 16px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.archive-task-expand-btn:hover {
+    background: var(--gold);
+    color: var(--white);
+    border-color: var(--gold);
+}
+
+.archive-task-item.expanded .archive-task-expand-btn {
+    transform: rotate(90deg);
+}
+
+.archive-task-expanded {
+    padding: 16px;
+    border-top: 1px solid var(--gray-lightest);
+}
+
+/* Buttons */
+.wfs-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.wfs-btn-primary {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.wfs-btn-primary:hover {
+    background: var(--gold-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3);
+}
+
+.wfs-btn-secondary {
+    background: var(--gray-lightest);
+    color: var(--gray-dark);
+}
+
+.wfs-btn-secondary:hover {
+    background: var(--gray-light);
+    color: var(--white);
+}
+
+.wfs-btn-danger {
+    background: var(--red);
+    color: var(--white);
+}
+
+.wfs-btn-danger:hover {
+    background: #c92a2a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(220, 50, 50, 0.3);
+}
+
+/* Modals */
+.wfs-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+}
+
+.wfs-modal.active {
+    display: flex;
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.wfs-modal-content {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: modalSlideUp 0.3s ease;
+}
+
+@keyframes modalSlideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.wfs-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid var(--gray-lightest);
+}
+
+.wfs-modal-header h3 {
+    margin: 0;
+    font-size: 20px;
+    color: var(--black);
+}
+
+.wfs-modal-close {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--gray-light);
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.wfs-modal-close:hover {
+    background: var(--gray-lightest);
+    color: var(--black);
+}
+
+.wfs-modal-body {
+    padding: 20px;
+}
+
+.wfs-modal-body p {
+    margin: 0 0 16px 0;
+    color: var(--gray-dark);
+    font-size: 15px;
+}
+
+.wfs-modal-body label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--gray-dark);
+    font-size: 14px;
+}
+
+.wfs-modal-body textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--gray-lightest);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    transition: var(--transition);
+}
+
+.wfs-modal-body textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.wfs-modal-footer {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    padding: 20px;
+    border-top: 2px solid var(--gray-lightest);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wfs-dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .wfs-tabs-nav {
+        overflow-x: auto;
+    }
+    
+    .wfs-tab-button {
+        white-space: nowrap;
+    }
+    
+    .wfs-task-collapsed {
+        flex-wrap: wrap;
+    }
+    
+    .task-status-badge {
+        order: -1;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .workflow-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .wfs-archive-table {
+        font-size: 13px;
+    }
+    
+    .wfs-archive-table th,
+    .wfs-archive-table td {
+        padding: 10px;
+    }
+}
+
+/* Loading State */
+.wfs-loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--gray-lightest);
+    border-top-color: var(--gold);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Filter Controls */
+.wfs-filter-controls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.wfs-archive-filter {
+    padding: 8px 16px;
+    border: 2px solid var(--gray-lightest);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    background: var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.wfs-archive-filter:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.status-completed,
+.status-badge.status-complete {
+    background: rgba(70, 180, 80, 0.1);
+    color: var(--green);
+}
+
+.status-badge.status-cancelled {
+    background: rgba(220, 50, 50, 0.1);
+    color: var(--red);
+}
+
+.no-reopen-msg {
+    color: var(--gray-light);
+    font-size: 13px;
+    font-style: italic;
+}
+
+/* Priority Badges */
+.task-priority,
+.task-priority-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.task-priority.priority-high,
+.task-priority-badge.priority-high {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.task-priority.priority-medium,
+.task-priority-badge.priority-medium {
+    background: #fff9e6;
+    color: #f57c00;
+}
+
+.task-priority.priority-low,
+.task-priority-badge.priority-low {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+/* ============================================
+   WORKFLOW DASHBOARD - MOBILE FIXES
+   Add to workflow dashboard CSS file
+   ============================================ */
+
+/* ===== GENERAL MOBILE CONTAINER ===== */
+@media (max-width: 768px) {
+    /* Prevent horizontal overflow */
+    .wfs-workflow-dashboard,
+    .workflow-dashboard-container {
+        max-width: 100vw;
+        overflow-x: hidden;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+    
+    /* Ensure all content stays within screen */
+    .wfs-workflow-dashboard * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* ===== TABS - FIT ALL ON SCREEN ===== */
+@media (max-width: 768px) {
+    /* Tab container */
+    .workflow-tabs,
+    .wfs-tabs,
+    .dashboard-tabs {
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 20px;
+        gap: 0;
+        padding: 0;
+    }
+    
+    /* Individual tabs - equal width, fit on screen */
+    .workflow-tabs button,
+    .wfs-tabs button,
+    .dashboard-tabs button,
+    .tab-button {
+        flex: 1 1 33.333%;
+        min-width: 0;
+        padding: 12px 8px;
+        font-size: 13px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border: none;
+        background: transparent;
+        border-bottom: 3px solid transparent;
+    }
+    
+    /* Active tab */
+    .workflow-tabs button.active,
+    .wfs-tabs button.active,
+    .tab-button.active {
+        border-bottom: 3px solid #D4AF37;
+        font-weight: 600;
+    }
+    
+    /* If tabs have icons */
+    .tab-button .tab-icon {
+        display: none; /* Hide icons on mobile to save space */
+    }
+}
+
+/* ===== TASK CARD FIXES ===== */
+@media (max-width: 768px) {
+    /* Task card container */
+    .task-card,
+    .workflow-card,
+    .wfs-task-card {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 15px;
+        padding: 15px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    /* Task title - smaller on mobile */
+    .task-card h3,
+    .task-card .task-title,
+    .workflow-card h3,
+    .workflow-card .workflow-title {
+        font-size: 16px !important;
+        line-height: 1.3;
+        margin-bottom: 10px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    /* Task name/title text */
+    .task-name,
+    .workflow-name {
+        font-size: 16px !important;
+        font-weight: 600;
+        word-break: break-word;
+    }
+    
+    /* Task description */
+    .task-description,
+    .workflow-description {
+        font-size: 14px;
+        line-height: 1.4;
+        word-wrap: break-word;
+    }
+    
+    /* Task metadata (assigned to, due date, etc) */
+    .task-meta,
+    .task-details,
+    .workflow-meta {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+/* ===== MONITORING TAB - FIX OVERFLOW ===== */
+@media (max-width: 768px) {
+    /* Monitoring tab container */
+    #monitoring-tab,
+    .monitoring-section,
+    [data-tab="monitoring"] {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        padding: 0 10px;
+    }
+    
+    /* Workflow cards in monitoring */
+    .monitoring-section .workflow-card,
+    .monitoring-section .task-card {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    /* Any tables in monitoring */
+    .monitoring-section table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* ===== ARCHIVE TAB - FIX OVERFLOW ===== */
+@media (max-width: 768px) {
+    /* Archive tab container */
+    #archive-tab,
+    .archive-section,
+    [data-tab="archive"] {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        padding: 0 10px;
+    }
+    
+    /* Archived workflow cards */
+    .archive-section .workflow-card,
+    .archive-section .task-card {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    /* Archive filters/dropdowns */
+    .archive-section select,
+    .archive-section .filter-dropdown {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* ===== REOPEN WORKFLOW BUTTON - FIX POSITIONING ===== */
+@media (max-width: 768px) {
+    /* Button container */
+    .workflow-actions,
+    .card-actions,
+    .task-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    /* All action buttons */
+    .workflow-actions button,
+    .card-actions button,
+    .task-actions button,
+    .reopen-workflow-btn,
+    .cancel-workflow-btn,
+    .btn-reopen {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 12px 20px;
+        font-size: 15px;
+        margin: 0 !important;
+        box-sizing: border-box;
+        white-space: normal;
+        min-height: 44px;
+    }
+    
+    /* Reopen button specifically */
+    button[class*="reopen"],
+    .reopen-workflow-btn {
+        background: #D4AF37;
+        color: #000;
+        border: 2px solid #D4AF37;
+        font-weight: 600;
+    }
+    
+    /* Cancel button */
+    button[class*="cancel"],
+    .cancel-workflow-btn {
+        background: #dc3545;
+        color: #fff;
+        border: 2px solid #dc3545;
+    }
+}
+
+/* ===== WORKFLOW DETAIL VIEW ===== */
+@media (max-width: 768px) {
+    /* Workflow detail card */
+    .workflow-detail,
+    .workflow-expanded {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        margin: 0;
+    }
+    
+    /* Client name, dates, etc */
+    .workflow-info,
+    .workflow-metadata {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    
+    /* Status badges */
+    .workflow-status,
+    .task-status,
+    .status-badge {
+        font-size: 12px;
+        padding: 4px 10px;
+        display: inline-block;
+        margin: 5px 5px 5px 0;
+    }
+}
+
+/* ===== TASK LIST WITHIN WORKFLOW ===== */
+@media (max-width: 768px) {
+    /* Tasks section */
+    .workflow-tasks,
+    .tasks-list {
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    /* Task list heading */
+    .tasks-heading {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    /* Individual task in list */
+    .task-item,
+    .workflow-task-item {
+        padding: 12px;
+        margin-bottom: 10px;
+        background: #f9f9f9;
+        border-radius: 6px;
+        border-left: 3px solid #D4AF37;
+    }
+    
+    /* Task checkbox */
+    .task-item input[type="checkbox"] {
+        min-width: 20px;
+        min-height: 20px;
+        margin-right: 10px;
+    }
+    
+    /* Task title in list */
+    .task-item .task-name {
+        font-size: 15px;
+        font-weight: 600;
+    }
+}
+
+/* ===== PRIORITY INDICATORS ===== */
+@media (max-width: 768px) {
+    /* Priority badges/dots */
+    .priority-indicator,
+    .priority-dot,
+    .priority-badge {
+        font-size: 12px;
+        padding: 3px 8px;
+    }
+    
+    /* Priority text */
+    .priority-high,
+    .priority-medium,
+    .priority-low {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+
+/* ===== WORKFLOW HEADER (Title appearing twice fix) ===== */
+@media (max-width: 768px) {
+    /* Page title */
+    .workflow-dashboard-container > h1:first-child,
+    .wfs-workflow-dashboard > h1:first-child {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    /* Remove duplicate title if present */
+    .workflow-dashboard-container h1 + h1,
+    .wfs-workflow-dashboard h1 + h1 {
+        display: none;
+    }
+}
+
+/* ===== SCROLLABLE AREAS ===== */
+@media (max-width: 768px) {
+    /* Any scrollable content */
+    .scrollable-content,
+    .overflow-scroll {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+    }
+    
+    /* Prevent body scroll when modal/detail open */
+    body.modal-open,
+    body.detail-open {
+        overflow: hidden;
+    }
+}
+
+/* ===== TEXT OVERFLOW HANDLING ===== */
+@media (max-width: 768px) {
+    /* Ensure long text doesn't overflow */
+    .workflow-card p,
+    .task-card p,
+    .task-description,
+    .workflow-description {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    /* Truncate very long titles with ellipsis */
+    .truncate-mobile {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+/* ===== USER INFO / ASSIGNED TO ===== */
+@media (max-width: 768px) {
+    /* Assigned to section */
+    .assigned-to,
+    .task-assignee {
+        font-size: 13px;
+    }
+    
+    /* User badge/name */
+    .user-badge,
+    .assignee-name {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+}
+
+/* ===== DATES ===== */
+@media (max-width: 768px) {
+    /* Date displays */
+    .due-date,
+    .start-date,
+    .completion-date {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+}
+
+/* ===== GOLD BORDERS (Maintain branding) ===== */
+@media (max-width: 768px) {
+    /* Keep gold accent borders */
+    .workflow-card,
+    .task-card {
+        border-left: 4px solid #D4AF37;
+    }
+    
+    /* Active/selected items */
+    .workflow-card.active,
+    .task-card.active {
+        border-left-width: 6px;
+    }
+}
+
+/* ===== SMALL MOBILE (< 480px) ===== */
+@media (max-width: 480px) {
+    /* Even smaller text on very small screens */
+    .task-card h3,
+    .workflow-card h3 {
+        font-size: 15px !important;
+    }
+    
+    .task-meta,
+    .workflow-meta {
+        font-size: 12px;
+    }
+    
+    /* Tabs even more compact */
+    .workflow-tabs button {
+        font-size: 12px;
+        padding: 10px 6px;
+    }
+    
+    /* Buttons */
+    .workflow-actions button {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+}
+
+/* ============================================
+   WORKFLOW TABS - HYBRID (DESKTOP/MOBILE)
+   Desktop: Tabs | Mobile: Dropdown
+   STRONGER SPECIFICITY
+   ============================================ */
+
+/* Desktop: Keep tabs visible, hide dropdown */
+@media (min-width: 769px) {
+    .wfs-dashboard-wrapper .wfs-tabs-nav,
+    .wfs-tabs-nav,
+    div.wfs-tabs-nav {
+        display: flex !important;
+    }
+    
+    .wfs-dashboard-wrapper .mobile-tab-dropdown,
+    .mobile-tab-dropdown,
+    div.mobile-tab-dropdown {
+        display: none !important;
+    }
+}
+
+/* Mobile: Hide tabs, show dropdown */
+@media (max-width: 768px) {
+    /* Force hide desktop tabs on mobile */
+    .wfs-dashboard-wrapper .wfs-tabs-nav,
+    .wfs-tabs-nav,
+    div.wfs-tabs-nav,
+    .wfs-tabs-nav.wfs-tabs-nav {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+    }
+    
+    /* Force show mobile dropdown */
+    .wfs-dashboard-wrapper .mobile-tab-dropdown,
+    .mobile-tab-dropdown,
+    div.mobile-tab-dropdown {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    /* Dropdown styling */
+    .mobile-tab-dropdown select,
+    .mobile-tab-select {
+        width: 100%;
+        padding: 14px 40px 14px 15px;
+        font-size: 16px;
+        font-weight: 600;
+        border: 2px solid #D4AF37;
+        border-radius: 6px;
+        background: #fff;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23D4AF37' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+        background-size: 14px;
+        color: #000;
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .mobile-tab-dropdown select:focus,
+    .mobile-tab-select:focus {
+        outline: none;
+        border-color: #D4AF37;
+        box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+    }
+}
+
+
+
+/* ============================================
+   MONITORING TAB - MOBILE LAYOUT FIX
+   Simple vertical stack - NO OVERLAP
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Monitoring container */
+    .wfs-monitoring-container {
+        max-width: 100%;
+        overflow-x: hidden;
+        padding: 10px;
+    }
+    
+    /* Workflow card */
+    .wfs-workflow-card {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    /* Workflow header - stack button below */
+    .workflow-header {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    /* Workflow title smaller on mobile */
+    .workflow-title {
+        font-size: 18px !important;
+        line-height: 1.3;
+        margin-bottom: 8px;
+    }
+    
+    /* Workflow meta - stack vertically */
+    .workflow-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        font-size: 13px;
+    }
+    
+    /* Cancel button full width */
+    .cancel-workflow-btn {
+        width: 100%;
+        min-height: 44px;
+        font-size: 15px;
+    }
+    
+    /* ===== TASK ITEMS - FORCE BLOCK LAYOUT ===== */
+    
+    /* Task container */
+    .monitoring-task-item {
+        width: 100%;
+        margin-bottom: 12px;
+        background: #f9f9f9;
+        border-left: 3px solid #D4AF37;
+        padding: 12px;
+        border-radius: 6px;
+    }
+    
+    /* Task collapsed - RESET TO BLOCK */
+    .monitoring-task-collapsed {
+        display: block !important;
+        position: relative;
+        padding-right: 45px; /* Space for button */
+        line-height: 1.5;
+    }
+    
+    /* Line 1: Icon + Name (inline) */
+    .monitoring-task-collapsed .task-icon {
+        display: inline;
+        font-size: 18px;
+        margin-right: 6px;
+    }
+    
+    .monitoring-task-collapsed .task-name {
+        display: inline;
+        font-size: 16px;
+        font-weight: 600;
+        word-wrap: break-word;
+    }
+    
+    /* Line 2: Priority (block, new line) */
+    .monitoring-task-collapsed .task-priority-badge {
+        display: block;
+        font-size: 13px;
+        margin-top: 8px;
+        margin-left: 24px; /* Indent under name */
+    }
+    
+    /* Line 3: Status (block, new line) */
+    .monitoring-task-collapsed .task-status-label {
+        display: block;
+        font-size: 12px;
+        color: #666;
+        margin-top: 4px;
+        margin-left: 24px; /* Indent under name */
+    }
+    
+    /* Line 4: Assignee (block, new line) */
+    .monitoring-task-collapsed .task-assignee {
+        display: block;
+        font-size: 13px;
+        color: #333;
+        margin-top: 4px;
+        margin-left: 24px; /* Indent under name */
+    }
+    
+    /* Expand button - absolute positioned top right */
+    .monitoring-task-expand-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+        background: #D4AF37;
+        color: #000;
+        border: none;
+        border-radius: 4px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    
+    /* Expanded details */
+    .monitoring-task-expanded {
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #ddd;
+    }
+    
+    .monitoring-task-expanded .task-info-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .monitoring-task-expanded .task-info-item {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+/* ============================================
+   ARCHIVE TAB - MOBILE FIX (CORRECTED)
+   Fix: Reopen button + Task name vertical stacking
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Archive container */
+    .wfs-archive-container {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+        padding: 10px !important;
+    }
+    
+    /* Archive workflow card */
+    .wfs-archive-workflow-card {
+        width: 100% !important;
+        padding: 15px !important;
+        margin-bottom: 20px !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* ===== WORKFLOW HEADER - FIX BUTTON CUTOFF ===== */
+    
+    .archive-workflow-header {
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .archive-workflow-title-section {
+        width: 100% !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .archive-workflow-title {
+        font-size: 18px !important;
+        line-height: 1.3 !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .archive-workflow-meta {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 5px !important;
+        font-size: 13px !important;
+    }
+    
+    /* Cancellation info box */
+    .cancellation-info {
+        display: block !important;
+        width: 100% !important;
+        font-size: 13px !important;
+        line-height: 1.6 !important;
+        padding: 10px !important;
+        background: #fff3cd !important;
+        border-left: 3px solid #ffc107 !important;
+        border-radius: 4px !important;
+        margin: 10px 0 !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Actions - CRITICAL FIX FOR BUTTON */
+    .archive-workflow-actions {
+        display: block !important;
+        width: 100% !important;
+        margin-top: 12px !important;
+        clear: both !important;
+    }
+    
+    /* Reopen button - FORCE FULL WIDTH */
+    .reopen-workflow-btn,
+    button.reopen-workflow-btn,
+    .wfs-btn-secondary.reopen-workflow-btn {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 44px !important;
+        font-size: 15px !important;
+        padding: 12px 20px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        text-align: center !important;
+    }
+    
+    .no-reopen-msg {
+        display: block !important;
+        width: 100% !important;
+        padding: 10px !important;
+        text-align: center !important;
+    }
+    
+    /* ===== ARCHIVE TASKS - FIX VERTICAL TEXT ===== */
+    
+    .archive-workflow-tasks {
+        width: 100% !important;
+        margin-top: 15px !important;
+    }
+    
+    .tasks-header {
+        font-size: 15px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    /* Archive task item */
+    .archive-task-item {
+        width: 100% !important;
+        margin-bottom: 12px !important;
+        background: #f9f9f9 !important;
+        border-left: 3px solid #D4AF37 !important;
+        padding: 12px !important;
+        border-radius: 6px !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* CRITICAL: Fix vertical stacking of task name */
+    .archive-task-collapsed {
+        display: block !important;
+        width: 100% !important;
+        position: relative !important;
+        padding-right: 45px !important;
+        line-height: 1.5 !important;
+    }
+    
+    /* Icon - inline */
+    .archive-task-collapsed .task-icon {
+        display: inline-block !important;
+        font-size: 18px !important;
+        margin-right: 6px !important;
+        vertical-align: top !important;
+    }
+    
+    /* Name - INLINE-BLOCK to prevent character stacking */
+    .archive-task-collapsed .task-name {
+        display: inline !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important;
+        max-width: calc(100% - 75px) !important;
+        vertical-align: top !important;
+    }
+    
+    /* Priority - new line */
+    .archive-task-collapsed .task-priority-badge {
+        display: block !important;
+        font-size: 13px !important;
+        margin-top: 8px !important;
+        margin-left: 24px !important;
+        width: auto !important;
+    }
+    
+    /* Status - new line */
+    .archive-task-collapsed .task-status-label {
+        display: block !important;
+        font-size: 12px !important;
+        color: #666 !important;
+        margin-top: 4px !important;
+        margin-left: 24px !important;
+        width: auto !important;
+    }
+    
+    /* Assignee - new line */
+    .archive-task-collapsed .task-assignee {
+        display: block !important;
+        font-size: 13px !important;
+        color: #333 !important;
+        margin-top: 4px !important;
+        margin-left: 24px !important;
+        width: auto !important;
+    }
+    
+    /* Expand button */
+    .archive-task-expand-btn {
+        position: absolute !important;
+        top: 10px !important;
+        right: 10px !important;
+        width: 36px !important;
+        height: 36px !important;
+        background: #D4AF37 !important;
+        color: #000 !important;
+        border: none !important;
+        border-radius: 4px !important;
+        font-size: 18px !important;
+    }
+    
+    /* Expanded content */
+    .archive-task-expanded {
+        margin-top: 15px !important;
+        padding-top: 15px !important;
+        border-top: 1px solid #ddd !important;
+    }
+    
+    .archive-task-expanded .task-info-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+}
+
+/* Create Task Section */
+.wfs-create-task-section {
+    padding: 20px;
+    background: linear-gradient(135deg, #D4AF37 0%, #f4d47c 100%);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.wfs-create-task-section button {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 30px;
+    background: white;
+    color: #D4AF37;
+    border: 2px solid #D4AF37;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.wfs-create-task-section button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    background: #D4AF37;
+    color: white;
+}
+
+/* Create Task Modal - Larger */
+.wfs-modal-large .wfs-modal-content {
+    max-width: 600px;
+}
+
+/* Form Styling */
+.form-row {
+    margin-bottom: 20px;
+}
+
+.form-row label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-row input[type="text"],
+.form-row input[type="date"],
+.form-row select,
+.form-row textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.form-row small {
+    display: block;
+    margin-top: 4px;
+    color: #666;
+    font-size: 12px;
+}
+
+/* ===== CREATE TASK BUTTON - MOBILE FIX ===== */
+@media (max-width: 768px) {
+    .wfs-create-task-section {
+        padding: 15px 10px;
+        margin-bottom: 15px;
+display: block !important; /* Force show on mobile */
+    }
+    
+    .wfs-create-task-section button {
+        width: 100%;
+        font-size: 15px;
+        padding: 14px 20px;
+        min-height: 48px; /* Better touch target */
+        -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+    }
+    
+    /* Create Task Modal - Mobile Optimized */
+    .wfs-modal-large .wfs-modal-content {
+        max-width: 95%;
+        margin: 20px auto;
+        max-height: 90vh;
+    }
+    
+    .wfs-modal-large .wfs-modal-body {
+        max-height: 60vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Form fields larger on mobile */
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+        padding: 12px !important;
+        min-height: 44px;
+    }
+    
+    .form-row label {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+}

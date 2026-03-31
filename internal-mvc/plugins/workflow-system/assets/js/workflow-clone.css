@@ -1,0 +1,454 @@
+/**
+ * Workflow Batch Clone Styles
+ * Media Vines Corp - Gold & Black Theme
+ */
+
+/* ============================================
+   BATCH CLONE MODAL
+   ============================================ */
+.wfs-clone-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999999;
+    display: none;
+}
+
+.wfs-clone-modal-overlay.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wfs-clone-modal {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* Modal Header */
+.wfs-clone-modal-header {
+    padding: 25px 30px;
+    border-bottom: 2px solid #D4AF37;
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wfs-clone-modal-header h2 {
+    margin: 0;
+    color: #D4AF37;
+    font-size: 24px;
+}
+
+.wfs-clone-modal-close {
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+    transition: all 0.2s;
+}
+
+.wfs-clone-modal-close:hover {
+    background: #D4AF37;
+    color: #000;
+}
+
+/* Modal Body */
+.wfs-clone-modal-body {
+    padding: 30px;
+}
+
+.clone-info-box {
+    padding: 15px;
+    background: #f9f9f9;
+    border-left: 4px solid #D4AF37;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.clone-info-box h3 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    color: #000;
+}
+
+.clone-info-box p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Date Entries */
+.date-entries-container {
+    margin: 25px 0;
+}
+
+.date-entries-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.date-entries-header h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #000;
+}
+
+.add-date-btn {
+    padding: 8px 15px;
+    background: #D4AF37;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.add-date-btn:hover {
+    background: #c09a2b;
+}
+
+.date-entries-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.date-entry {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 12px;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.date-entry:hover {
+    border-color: #D4AF37;
+    background: #fff;
+}
+
+.date-entry-number {
+    width: 32px;
+    height: 32px;
+    background: #D4AF37;
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.date-entry-input {
+    flex: 1;
+}
+
+.date-entry-input input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.date-entry-input input:focus {
+    outline: none;
+    border-color: #D4AF37;
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.1);
+}
+
+.date-entry-preview {
+    flex: 1;
+    font-size: 13px;
+    color: #666;
+}
+
+.remove-date-btn {
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    color: #999;
+}
+
+.remove-date-btn:hover {
+    background: #dc3232;
+    border-color: #dc3232;
+    color: #fff;
+}
+
+.empty-dates-message {
+    padding: 40px 20px;
+    text-align: center;
+    background: #f9f9f9;
+    border: 2px dashed #ddd;
+    border-radius: 6px;
+    color: #666;
+}
+
+.empty-dates-message p {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+}
+
+/* Preview Section */
+.clone-preview {
+    margin: 25px 0;
+    padding: 20px;
+    background: #f0f8ff;
+    border: 1px solid #D4AF37;
+    border-radius: 6px;
+}
+
+.clone-preview h3 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    color: #000;
+}
+
+.preview-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.preview-list li {
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    background: #fff;
+    border-left: 3px solid #D4AF37;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #333;
+}
+
+.preview-count {
+    display: inline-block;
+    padding: 4px 10px;
+    background: #D4AF37;
+    color: #000;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+/* Modal Footer */
+.wfs-clone-modal-footer {
+    padding: 20px 30px;
+    border-top: 1px solid #e0e0e0;
+    background: #f9f9f9;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.wfs-clone-modal-footer .button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.button-primary {
+    background: #D4AF37 !important;
+    border-color: #D4AF37 !important;
+    color: #000 !important;
+}
+
+.button-primary:hover {
+    background: #c09a2b !important;
+    border-color: #c09a2b !important;
+}
+
+.button-primary:disabled {
+    background: #ccc !important;
+    border-color: #ccc !important;
+    cursor: not-allowed;
+}
+
+.button-secondary {
+    background: #fff !important;
+    border-color: #000 !important;
+    color: #000 !important;
+}
+
+.button-secondary:hover {
+    background: #f5f5f5 !important;
+}
+
+/* Success Modal */
+.clone-success-modal {
+    max-width: 700px;
+}
+
+.success-icon {
+    text-align: center;
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.success-message {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.success-message h3 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: #46b450;
+}
+
+.success-message p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.created-workflows-list {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.workflow-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.workflow-item:hover {
+    border-color: #D4AF37;
+    background: #fff;
+}
+
+.workflow-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 15px;
+    color: #000;
+}
+
+.workflow-info p {
+    margin: 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.workflow-actions a {
+    padding: 6px 12px;
+    background: #D4AF37;
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.workflow-actions a:hover {
+    background: #c09a2b;
+}
+
+/* Loading State */
+.clone-loading {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.clone-loading .spinner {
+    float: none;
+    margin: 0 auto 20px;
+}
+
+.clone-loading p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* jQuery UI Datepicker Customization */
+.ui-datepicker {
+    border: 2px solid #D4AF37 !important;
+    border-radius: 6px !important;
+}
+
+.ui-datepicker-header {
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%) !important;
+    border: none !important;
+}
+
+.ui-datepicker-title {
+    color: #D4AF37 !important;
+}
+
+.ui-state-default {
+    border: 1px solid #ddd !important;
+}
+
+.ui-state-active {
+    background: #D4AF37 !important;
+    border-color: #D4AF37 !important;
+    color: #000 !important;
+}
+
+.ui-state-hover {
+    background: #f9f9f9 !important;
+    border-color: #D4AF37 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .wfs-clone-modal {
+        width: 95%;
+    }
+    
+    .wfs-clone-modal-header,
+    .wfs-clone-modal-body,
+    .wfs-clone-modal-footer {
+        padding: 20px;
+    }
+    
+    .date-entry {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .date-entry-preview {
+        padding-left: 44px;
+    }
+}

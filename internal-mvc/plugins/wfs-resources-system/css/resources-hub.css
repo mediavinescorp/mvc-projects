@@ -1,0 +1,1667 @@
+/* WFS Resources Hub Styles - Media Vines Corp Theme */
+:root {
+    --wfs-gold: #D4AF37;
+    --wfs-black: #000000;
+    --wfs-dark-gray: #1a1a1a;
+    --wfs-medium-gray: #333333;
+    --wfs-light-gray: #666666;
+    --wfs-border-gray: #cccccc;
+    --wfs-bg-light: #f5f5f5;
+    --wfs-white: #ffffff;
+    --wfs-danger: #dc3545;
+    --wfs-success: #28a745;
+}
+
+/* Container */
+.wfs-resources-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Views */
+.wfs-view {
+    display: none;
+}
+
+.wfs-view.active {
+    display: block;
+}
+
+/* Header */
+.wfs-resources-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--wfs-gold);
+}
+
+.wfs-resources-header h1 {
+    color: var(--wfs-black);
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Buttons */
+.wfs-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.wfs-btn-primary {
+    background-color: var(--wfs-gold);
+    color: var(--wfs-black);
+}
+
+.wfs-btn-primary:hover {
+    background-color: #c4a030;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3);
+}
+
+.wfs-btn-secondary {
+    background-color: var(--wfs-medium-gray);
+    color: var(--wfs-white);
+}
+
+.wfs-btn-secondary:hover {
+    background-color: var(--wfs-light-gray);
+}
+
+.wfs-btn-danger {
+    background-color: var(--wfs-danger);
+    color: var(--wfs-white);
+}
+
+.wfs-btn-danger:hover {
+    background-color: #c82333;
+}
+
+.wfs-btn-large {
+    padding: 12px 30px;
+    font-size: 16px;
+}
+
+.wfs-action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Filters */
+.wfs-resources-filters {
+    background-color: var(--wfs-bg-light);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.wfs-filter-row {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+/* Limit search box width on desktop */
+.wfs-search-box {
+    flex: 1 1 auto;
+    max-width: 400px;
+    min-width: 250px;
+}
+
+.wfs-search-box input {
+    width: 100%;
+}
+
+/* Filter group styling */
+.wfs-filter-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.wfs-filter-group select {
+    min-width: 150px;
+    max-width: 200px;
+}
+
+.wfs-filter-group select:focus {
+    outline: none;
+    border-color: var(--wfs-gold);
+}
+
+/* ============================================
+   ENHANCED STYLING - Search & Filters
+   ============================================ */
+
+/* Container styling */
+.wfs-resources-filters {
+    background: #f9f9f9;
+    padding: 25px 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
+}
+
+.wfs-filter-row {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+/* Search box */
+.wfs-search-box {
+    flex: 1 1 auto;
+    max-width: 400px;
+    min-width: 250px;
+    position: relative;
+}
+
+.wfs-search-box input {
+    width: 100%;
+    padding: 12px 45px 12px 15px;
+    font-size: 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.wfs-search-box input:focus {
+    outline: none;
+    border-color: #D4AF37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.wfs-search-box input::placeholder {
+    color: #999;
+}
+
+/* Filter group */
+.wfs-filter-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Dropdowns */
+.wfs-filter-group select {
+    min-width: 150px;
+    max-width: 200px;
+    padding: 12px 35px 12px 15px;
+    font-size: 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.wfs-filter-group select:hover {
+    border-color: #D4AF37;
+}
+
+.wfs-filter-group select:focus {
+    outline: none;
+    border-color: #D4AF37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+/* Clear Filters button */
+.wfs-filter-group button {
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid #000;
+    background: #000;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.wfs-filter-group button:hover {
+    background: #D4AF37;
+    border-color: #D4AF37;
+    color: #000;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.wfs-filter-group button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+    .wfs-resources-filters {
+        padding: 20px;
+    }
+    
+    .wfs-filter-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .wfs-search-box {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .wfs-filter-group {
+        width: 100%;
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .wfs-resources-filters {
+        padding: 20px 15px;
+    }
+    
+    .wfs-search-box input {
+        font-size: 16px !important;
+        padding: 14px 15px;
+    }
+    
+    .wfs-filter-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .wfs-filter-group select,
+    .wfs-filter-group button {
+        width: 100%;
+        font-size: 16px !important;
+        padding: 14px 15px;
+    }
+}
+
+
+/* Table */
+.wfs-resources-table-wrapper {
+    background-color: var(--wfs-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wfs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.wfs-table thead {
+    background-color: var(--wfs-black);
+    color: var(--wfs-white);
+}
+
+.wfs-table thead th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.wfs-table thead th.sortable {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding-right: 25px;
+}
+
+.wfs-table thead th.sortable:hover {
+    background-color: var(--wfs-dark-gray);
+}
+
+.wfs-table thead th .sort-indicator {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: var(--wfs-light-gray);
+}
+
+.wfs-table thead th.sorted-asc .sort-indicator::after {
+    content: '▲';
+    color: var(--wfs-gold);
+}
+
+.wfs-table thead th.sorted-desc .sort-indicator::after {
+    content: '▼';
+    color: var(--wfs-gold);
+}
+
+.wfs-table tbody tr {
+    border-bottom: 1px solid var(--wfs-border-gray);
+    transition: background-color 0.2s ease;
+}
+
+.wfs-table tbody tr:hover {
+    background-color: #fffbf0;
+}
+
+.wfs-table tbody td {
+    padding: 15px;
+    font-size: 14px;
+    color: var(--wfs-medium-gray);
+}
+
+.wfs-table tbody td.resource-title {
+    font-weight: 600;
+    color: var(--wfs-black);
+    cursor: pointer;
+}
+
+.wfs-table tbody td.resource-title:hover {
+    color: var(--wfs-gold);
+}
+
+.wfs-table tbody td .wfs-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 2px;
+    background-color: var(--wfs-bg-light);
+    color: var(--wfs-medium-gray);
+}
+
+.wfs-table tbody td .wfs-action-link {
+    color: var(--wfs-gold);
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.wfs-table tbody td .wfs-action-link:hover {
+    text-decoration: underline;
+}
+
+/* Loading */
+.wfs-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--wfs-border-gray);
+    border-top-color: var(--wfs-gold);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.wfs-loading-row td {
+    text-align: center;
+    padding: 40px;
+    color: var(--wfs-light-gray);
+}
+
+/* No Results */
+.wfs-no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--wfs-light-gray);
+    font-size: 16px;
+}
+
+/* Form */
+.wfs-resource-form {
+    background-color: var(--wfs-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wfs-form-group {
+    margin-bottom: 25px;
+}
+
+.wfs-form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.wfs-form-half {
+    flex: 1;
+}
+
+.wfs-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--wfs-black);
+    font-size: 14px;
+}
+
+.wfs-form-group label .required {
+    color: var(--wfs-danger);
+}
+
+.wfs-form-group small {
+    display: block;
+    margin-top: 5px;
+    color: var(--wfs-light-gray);
+    font-size: 12px;
+}
+
+.wfs-input,
+.wfs-select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid var(--wfs-border-gray);
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.wfs-input:focus,
+.wfs-select:focus {
+    outline: none;
+    border-color: var(--wfs-gold);
+}
+
+.wfs-select {
+    background-color: var(--wfs-white);
+}
+
+/* WordPress Editor */
+.wfs-form-group .wp-editor-wrap {
+    border: 2px solid var(--wfs-border-gray);
+    border-radius: 4px;
+}
+
+.wfs-form-group .wp-editor-wrap:focus-within {
+    border-color: var(--wfs-gold);
+}
+
+/* Form Meta */
+.wfs-form-meta {
+    background-color: var(--wfs-bg-light);
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.wfs-meta-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.wfs-meta-row:last-child {
+    margin-bottom: 0;
+}
+
+.wfs-meta-item {
+    flex: 1;
+    font-size: 14px;
+    color: var(--wfs-medium-gray);
+}
+
+.wfs-meta-item strong {
+    color: var(--wfs-black);
+}
+
+/* Form Actions */
+.wfs-form-actions {
+    display: flex;
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 2px solid var(--wfs-border-gray);
+}
+
+/* Resource View */
+.wfs-resource-content-wrapper {
+    background-color: var(--wfs-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.wfs-resource-meta-box {
+    background-color: var(--wfs-bg-light);
+    padding: 25px;
+    border-bottom: 3px solid var(--wfs-gold);
+}
+
+.wfs-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.wfs-resource-content {
+    padding: 30px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--wfs-medium-gray);
+}
+
+.wfs-resource-content h1,
+.wfs-resource-content h2,
+.wfs-resource-content h3,
+.wfs-resource-content h4,
+.wfs-resource-content h5,
+.wfs-resource-content h6 {
+    color: var(--wfs-black);
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.wfs-resource-content p {
+    margin-bottom: 1em;
+}
+
+.wfs-resource-content ul,
+.wfs-resource-content ol {
+    margin-bottom: 1em;
+    padding-left: 30px;
+}
+
+.wfs-resource-content a {
+    color: var(--wfs-gold);
+    text-decoration: none;
+}
+
+.wfs-resource-content a:hover {
+    text-decoration: underline;
+}
+
+.wfs-resource-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Modal */
+.wfs-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.wfs-modal-content {
+    background-color: var(--wfs-white);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.wfs-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    border-bottom: 2px solid var(--wfs-border-gray);
+}
+
+.wfs-modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: var(--wfs-black);
+}
+
+.wfs-modal-close {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--wfs-light-gray);
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wfs-modal-close:hover {
+    color: var(--wfs-black);
+}
+
+.wfs-modal-body {
+    padding: 25px;
+}
+
+.wfs-modal-footer {
+    padding: 20px 25px;
+    border-top: 2px solid var(--wfs-border-gray);
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+/* Responsive */
+/* Responsive */
+@media (max-width: 1024px) {
+    .wfs-resources-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .wfs-filter-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .wfs-search-box {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .wfs-filter-group {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .wfs-form-row {
+        flex-direction: column;
+    }
+    
+    .wfs-meta-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .wfs-resources-container {
+        padding: 10px;
+    }
+    
+    .wfs-table {
+        font-size: 12px;
+    }
+    
+    .wfs-table thead th,
+    .wfs-table tbody td {
+        padding: 10px 8px;
+    }
+    
+    .wfs-form-actions {
+        flex-direction: column;
+    }
+    
+    .wfs-btn-large {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Utility */
+.text-center {
+    text-align: center;
+}
+/* ========================================
+   ENHANCED DEFAULT STYLING FOR ALL RESOURCES
+   Add this section to your resources-hub.css file
+   after the existing .wfs-resource-content styles
+   ======================================== */
+
+/* Enhanced Resource Content Styling */
+.wfs-resource-content {
+    /* Base Typography */
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--wfs-medium-gray);
+}
+
+/* Headings with Gold Accents */
+.wfs-resource-content h1 {
+    color: var(--wfs-black);
+    font-size: 32px;
+    font-weight: 700;
+    border-bottom: 3px solid var(--wfs-gold);
+    padding-bottom: 10px;
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+}
+
+.wfs-resource-content h2 {
+    color: var(--wfs-black);
+    font-size: 26px;
+    font-weight: 700;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+    margin-top: 1.5em;
+    margin-bottom: 0.6em;
+}
+
+.wfs-resource-content h3 {
+    color: var(--wfs-black);
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    border-left: 4px solid var(--wfs-gold);
+    padding-left: 15px;
+}
+
+.wfs-resource-content h4 {
+    color: var(--wfs-medium-gray);
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.wfs-resource-content h5,
+.wfs-resource-content h6 {
+    color: var(--wfs-medium-gray);
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+/* Paragraphs and Text */
+.wfs-resource-content p {
+    margin-bottom: 1.2em;
+    line-height: 1.8;
+}
+
+.wfs-resource-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Strong and Emphasis */
+.wfs-resource-content strong,
+.wfs-resource-content b {
+    color: var(--wfs-black);
+    font-weight: 700;
+}
+
+.wfs-resource-content em,
+.wfs-resource-content i {
+    font-style: italic;
+}
+
+/* Lists with Better Spacing */
+.wfs-resource-content ul,
+.wfs-resource-content ol {
+    margin-bottom: 1.5em;
+    padding-left: 30px;
+}
+
+.wfs-resource-content ul {
+    list-style-type: disc;
+}
+
+.wfs-resource-content ol {
+    list-style-type: decimal;
+}
+
+.wfs-resource-content li {
+    margin-bottom: 0.5em;
+    line-height: 1.8;
+}
+
+.wfs-resource-content li:last-child {
+    margin-bottom: 0;
+}
+
+.wfs-resource-content ul ul,
+.wfs-resource-content ol ol,
+.wfs-resource-content ul ol,
+.wfs-resource-content ol ul {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Links with Gold Hover */
+.wfs-resource-content a {
+    color: var(--wfs-gold);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.wfs-resource-content a:hover {
+    text-decoration: underline;
+    color: #c4a030;
+}
+
+/* Blockquotes */
+.wfs-resource-content blockquote {
+    background: #fffbf0;
+    border-left: 5px solid var(--wfs-gold);
+    margin: 1.5em 0;
+    padding: 20px 25px;
+    font-style: italic;
+    color: var(--wfs-medium-gray);
+}
+
+.wfs-resource-content blockquote p {
+    margin-bottom: 0.5em;
+}
+
+.wfs-resource-content blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* Code Blocks */
+.wfs-resource-content code {
+    background: #f5f5f5;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 14px;
+    color: #c7254e;
+}
+
+.wfs-resource-content pre {
+    background: #f5f5f5;
+    border-left: 4px solid var(--wfs-gold);
+    padding: 15px 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 1.5em 0;
+}
+
+.wfs-resource-content pre code {
+    background: none;
+    padding: 0;
+    color: var(--wfs-medium-gray);
+}
+
+/* Tables */
+.wfs-resource-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    background: var(--wfs-white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wfs-resource-content table thead {
+    background-color: var(--wfs-black);
+    color: var(--wfs-white);
+}
+
+.wfs-resource-content table th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.wfs-resource-content table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    color: var(--wfs-medium-gray);
+}
+
+.wfs-resource-content table tbody tr:hover {
+    background-color: #fffbf0;
+}
+
+.wfs-resource-content table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Images */
+.wfs-resource-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5em 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wfs-resource-content figure {
+    margin: 1.5em 0;
+    text-align: center;
+}
+
+.wfs-resource-content figcaption {
+    font-size: 14px;
+    color: var(--wfs-light-gray);
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Horizontal Rules */
+.wfs-resource-content hr {
+    border: none;
+    border-top: 2px solid #eee;
+    margin: 2em 0;
+}
+
+/* Highlighted/Marked Text */
+.wfs-resource-content mark {
+    background: #fff9c4;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+/* Definition Lists */
+.wfs-resource-content dl {
+    margin: 1.5em 0;
+}
+
+.wfs-resource-content dt {
+    font-weight: 700;
+    color: var(--wfs-black);
+    margin-top: 1em;
+}
+
+.wfs-resource-content dd {
+    margin-left: 30px;
+    margin-bottom: 0.5em;
+    color: var(--wfs-medium-gray);
+}
+
+/* Special Styled Sections (if added with specific classes) */
+.wfs-resource-content .highlight-box {
+    background: #fffbf0;
+    border-left: 5px solid var(--wfs-gold);
+    padding: 20px 25px;
+    margin: 1.5em 0;
+    border-radius: 5px;
+}
+
+.wfs-resource-content .info-box {
+    background: #e3f2fd;
+    border-left: 5px solid #2196f3;
+    padding: 20px 25px;
+    margin: 1.5em 0;
+    border-radius: 5px;
+}
+
+.wfs-resource-content .warning-box {
+    background: #fff3e0;
+    border-left: 5px solid #ff9800;
+    padding: 20px 25px;
+    margin: 1.5em 0;
+    border-radius: 5px;
+}
+
+.wfs-resource-content .success-box {
+    background: #e8f5e9;
+    border-left: 5px solid #4caf50;
+    padding: 20px 25px;
+    margin: 1.5em 0;
+    border-radius: 5px;
+}
+
+/* Action Buttons/Links styled */
+.wfs-resource-content .button,
+.wfs-resource-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--wfs-gold);
+    color: var(--wfs-black);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 5px 5px 5px 0;
+}
+
+.wfs-resource-content .button:hover,
+.wfs-resource-content .btn:hover {
+    background: #c4a030;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* Responsive Video Embeds */
+.wfs-resource-content iframe {
+    max-width: 100%;
+    margin: 1.5em 0;
+}
+
+.wfs-resource-content .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    margin: 1.5em 0;
+}
+
+.wfs-resource-content .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+/* Print Styles */
+@media print {
+    .wfs-resource-content {
+        color: #000;
+    }
+    
+    .wfs-resource-content h1 {
+        border-bottom-color: #000;
+    }
+    
+    .wfs-resource-content h3 {
+        border-left-color: #000;
+    }
+    
+    .wfs-resource-content a {
+        color: #000;
+        text-decoration: underline;
+    }
+    
+    .wfs-resource-content blockquote {
+        border-left-color: #000;
+        background: #f5f5f5;
+    }
+    
+    .wfs-resource-content table thead {
+        background: #000;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .wfs-resource-content {
+        font-size: 14px;
+    }
+    
+    .wfs-resource-content h1 {
+        font-size: 26px;
+    }
+    
+    .wfs-resource-content h2 {
+        font-size: 22px;
+    }
+    
+    .wfs-resource-content h3 {
+        font-size: 18px;
+    }
+    
+    .wfs-resource-content table {
+        font-size: 13px;
+    }
+    
+    .wfs-resource-content table th,
+    .wfs-resource-content table td {
+        padding: 8px 10px;
+    }
+}
+
+/* ========================================
+   ENHANCED MOBILE RESPONSIVENESS
+   Add this to your resources-hub.css file
+   ======================================== */
+
+/* Fix table wrapper to allow horizontal scrolling on mobile */
+.wfs-resources-table-wrapper {
+    overflow-x: auto; /* Changed from overflow: hidden */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Ensure table maintains minimum width on mobile */
+@media (max-width: 768px) {
+    .wfs-table {
+        min-width: 800px; /* Prevents table from becoming too cramped */
+        font-size: 12px;
+    }
+    
+    /* Stack header buttons vertically on mobile */
+    .wfs-resources-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .wfs-action-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .wfs-action-buttons .wfs-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Make search and filters stack better */
+    .wfs-resources-filters {
+        padding: 15px;
+    }
+    
+    .wfs-filter-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .wfs-search-box {
+        width: 100%;
+    }
+    
+    .wfs-filter-group {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .wfs-filter-group select,
+    .wfs-filter-group .wfs-btn {
+        width: 100%;
+    }
+    
+    /* Improve form layout on mobile */
+    .wfs-resource-form {
+        padding: 20px 15px;
+    }
+    
+    .wfs-form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .wfs-form-half {
+        width: 100%;
+    }
+    
+    /* Stack form actions vertically */
+    .wfs-form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .wfs-form-actions .wfs-btn {
+        width: 100%;
+    }
+    
+    /* Improve modal on mobile */
+    .wfs-modal-content {
+        width: 95%;
+        margin: 10px;
+    }
+    
+    /* Better spacing for meta boxes */
+    .wfs-meta-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    /* Adjust resource content padding */
+    .wfs-resource-content-wrapper {
+        margin: 10px 0;
+    }
+    
+    .wfs-resource-content {
+        padding: 20px 15px;
+    }
+    
+    /* Make badges wrap better */
+    .wfs-table tbody td .wfs-badge {
+        display: inline-block;
+        margin: 2px 2px;
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+}
+
+/* Extra small screens (phones in portrait) */
+@media (max-width: 480px) {
+    .wfs-resources-container {
+        padding: 5px;
+    }
+    
+    .wfs-resources-header h1 {
+        font-size: 22px;
+    }
+    
+    .wfs-table {
+        min-width: 650px; /* Slightly smaller min-width for very small screens */
+        font-size: 11px;
+    }
+    
+    .wfs-table thead th,
+    .wfs-table tbody td {
+        padding: 8px 6px;
+    }
+    
+    /* Smaller buttons on very small screens */
+    .wfs-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    
+    .wfs-btn-large {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    /* Compact resource content */
+    .wfs-resource-content {
+        font-size: 14px;
+        padding: 15px 10px;
+    }
+    
+    .wfs-resource-content h1 {
+        font-size: 24px;
+    }
+    
+    .wfs-resource-content h2 {
+        font-size: 20px;
+    }
+    
+    .wfs-resource-content h3 {
+        font-size: 18px;
+    }
+}
+
+/* Tablet landscape and up */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .wfs-resources-container {
+        padding: 15px;
+    }
+    
+    .wfs-table {
+        font-size: 13px;
+    }
+    
+    .wfs-table thead th,
+    .wfs-table tbody td {
+        padding: 12px 10px;
+    }
+}
+
+/* Improve touch targets for mobile */
+@media (max-width: 768px) {
+    /* Make clickable elements easier to tap */
+    .wfs-table tbody td.resource-title {
+        padding: 12px 8px;
+        min-height: 44px; /* iOS recommended touch target size */
+        display: flex;
+        align-items: center;
+    }
+    
+    .wfs-action-link {
+        display: inline-block;
+        padding: 8px 12px;
+        margin: 2px;
+    }
+    
+    /* Make sortable headers easier to tap */
+    .wfs-table thead th.sortable {
+        padding: 12px 8px;
+        min-height: 44px;
+    }
+    
+    /* Improve form inputs for mobile */
+    .wfs-input,
+    .wfs-select {
+        font-size: 16px; /* Prevents iOS zoom on focus */
+        min-height: 44px;
+    }
+    
+    /* Better select boxes on mobile */
+    .wfs-select {
+        padding: 10px 12px;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+    .wfs-resources-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .wfs-action-buttons {
+        flex-direction: row;
+        width: auto;
+    }
+    
+    .wfs-action-buttons .wfs-btn {
+        width: auto;
+    }
+}
+
+/* Print styles for mobile */
+@media print {
+    .wfs-resources-filters,
+    .wfs-action-buttons,
+    .wfs-form-actions,
+    .wfs-table tbody td:last-child {
+        display: none;
+    }
+    
+    .wfs-resources-container {
+        padding: 0;
+    }
+    
+    .wfs-table {
+        font-size: 10px;
+    }
+}
+
+/* ============================================
+   SEARCH BAR LAYOUT FIX - Corrected Alignment
+   ============================================ */
+
+/* Desktop: Proper spacing and alignment */
+@media screen and (min-width: 769px) {
+    /* Container should span full width */
+    .wfs-resources-filters {
+        width: 100% !important;
+    }
+    
+    /* Make filter row flexbox with proper spacing */
+    .wfs-filter-row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 15px !important;
+        align-items: center !important;
+        width: 100% !important;
+        justify-content: flex-start !important;
+    }
+    
+    /* Search box - flexible width, max 400px */
+    .wfs-search-box {
+        flex: 1 1 auto !important;
+        max-width: 400px !important;
+        min-width: 250px !important;
+    }
+    
+    /* Input inside search box */
+    .wfs-search-box input.wfs-resource-search {
+        width: 100% !important;
+    }
+    
+    /* Filter group (dropdowns and button) */
+    .wfs-filter-group {
+        display: flex !important;
+        gap: 15px !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        flex: 0 1 auto !important;
+    }
+    
+    /* Individual dropdowns */
+    .wfs-filter-group select {
+        min-width: 150px !important;
+        max-width: 200px !important;
+        flex: 0 1 auto !important;
+    }
+    
+    /* Clear filters button */
+    .wfs-filter-group button,
+    .wfs-filter-group .clear-filters-btn {
+        flex: 0 0 auto !important;
+        white-space: nowrap !important;
+    }
+}
+
+/* Mobile: Stack vertically */
+@media screen and (max-width: 768px) {
+    .wfs-resources-filters {
+        width: 100% !important;
+    }
+    
+    .wfs-filter-row {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        width: 100% !important;
+    }
+    
+    .wfs-search-box {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .wfs-search-box input.wfs-resource-search {
+        width: 100% !important;
+        max-width: 100% !important;
+        font-size: 16px !important;
+        min-height: 44px !important;
+        padding: 12px !important;
+    }
+    
+    .wfs-filter-group {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        width: 100% !important;
+    }
+    
+    .wfs-filter-group select,
+    .wfs-filter-group button {
+        width: 100% !important;
+        max-width: 100% !important;
+        font-size: 16px !important;
+        min-height: 44px !important;
+    }
+}
+
+
+/* ============================================
+   FINAL POLISH - Refinements
+   Add to resources-hub.css after the enhanced styling
+   ============================================ */
+
+/* Fix search icon position */
+.wfs-search-box {
+    position: relative;
+}
+
+.wfs-search-box .dashicons,
+.wfs-search-box .dashicons-search {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Ensure consistent heights for all elements */
+.wfs-search-box input,
+.wfs-filter-group select,
+.wfs-filter-group button {
+    height: 46px;
+    line-height: 1.4;
+}
+
+/* Better dropdown spacing */
+.wfs-filter-group select {
+    min-width: 170px;
+    max-width: 220px;
+}
+
+/* If search icon is showing outside, hide it temporarily */
+.wfs-search-box > .dashicons-search {
+    display: none; /* We'll style the internal one instead */
+}
+
+/* Ensure filter group items align properly */
+.wfs-filter-group {
+    align-items: center;
+    margin-left: auto; /* Push to right side */
+}
+
+/* Better button styling */
+.wfs-filter-group button {
+    min-width: 140px;
+}
+
+/* ===== OPTIONAL: Add search icon inside input ===== */
+/* If you want a search icon INSIDE the input field */
+.wfs-search-box input {
+    padding-left: 40px; /* Make room for icon */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    background-size: 18px;
+}
+
+/* Remove icon background when focused */
+.wfs-search-box input:focus {
+    background-image: none;
+    padding-left: 15px;
+}
+
+/* ===== ENHANCE THE CREATE NEW POST BUTTON ===== */
+/* Make it match the gold branding */
+button.wfs-btn-primary,
+.wfs-btn-primary,
+button[class*="create-new"] {
+    background: #D4AF37 !important;
+    border: 2px solid #D4AF37 !important;
+    color: #000 !important;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(212, 175, 55, 0.2);
+}
+
+button.wfs-btn-primary:hover,
+.wfs-btn-primary:hover {
+    background: #000 !important;
+    border-color: #000 !important;
+    color: #D4AF37 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== PAGE TITLE STYLING ===== */
+/* Make the "Internal Resources Hub" title look better */
+.wfs-resources-container h1,
+.wfs-resources-hub h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+/* Add subtle underline accent */
+.wfs-resources-header {
+    border-bottom: 3px solid #D4AF37;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* ============================================
+   FIX: Remove horizontal scrolling
+   ============================================ */
+
+/* Ensure main containers don't cause overflow */
+.wfs-resources-container,
+.wfs-resources-hub {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ensure table container allows horizontal scroll INSIDE */
+.wfs-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+}
+
+/* But table itself should not cause page scroll */
+.wfs-table {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Fix any potential width issues */
+body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+/* Ensure resources filters don't overflow */
+.wfs-resources-filters {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Mobile: Fix search bar overflow */
+@media (max-width: 768px) {
+    /* Ensure parent container is properly constrained */
+    .wfs-resources-hub,
+    .wfs-resources-container {
+        max-width: 100vw;
+        overflow-x: hidden;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Fix search box width */
+    .wfs-search-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+    
+    .wfs-search-box input {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Ensure filter section doesn't overflow */
+    .wfs-resources-filters {
+        max-width: 100%;
+        box-sizing: border-box;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .wfs-filter-row {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}

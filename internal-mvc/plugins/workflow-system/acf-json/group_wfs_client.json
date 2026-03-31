@@ -1,0 +1,160 @@
+{
+    "key": "group_wfs_client",
+    "title": "Client Information",
+    "fields": [
+        {
+            "key": "field_client_email",
+            "label": "Email Address",
+            "name": "client_email",
+            "aria-label": "",
+            "type": "email",
+            "instructions": "Primary email for this client",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_client_phone",
+            "label": "Phone Number",
+            "name": "client_phone",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Primary phone number",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_client_address",
+            "label": "Address",
+            "name": "client_address",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Physical address",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_client_website",
+            "label": "Website URL",
+            "name": "client_website",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Client website URL",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_client_license",
+            "label": "License Number",
+            "name": "client_license",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "License or registration number",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_client_notes",
+            "label": "Additional Notes",
+            "name": "client_notes",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Any other important information about this client",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_client_active",
+            "label": "Active Client",
+            "name": "client_active",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "wfs_client"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0
+}

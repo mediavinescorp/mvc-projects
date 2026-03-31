@@ -1,0 +1,42 @@
+# MVC Projects — Raw GitHub URLs
+# Base: https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/internal-mvc
+
+# ============================================================
+# MVC CHILD THEME
+# ============================================================
+
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/internal-mvc/mvc-child-theme/footer-intranet.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/internal-mvc/mvc-child-theme/functions.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/internal-mvc/mvc-child-theme/header-intranet.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/internal-mvc/mvc-child-theme/page-dance-home.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/internal-mvc/mvc-child-theme/page-intranet.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/internal-mvc/mvc-child-theme/screenshot.png
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/internal-mvc/mvc-child-theme/single-dancer.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/internal-mvc/mvc-child-theme/style.css
+
+# JS
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/internal-mvc/mvc-child-theme/js/sop-checklist.js
+
+# ============================================================
+# PLUGINS
+# ============================================================
+
+# mvc-image-watermarker
+# Add files below as you identify them:
+# https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/internal-mvc/mvc-image-watermarker/
+
+# wfs-resources-system
+# Add files below as you identify them:
+# https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/internal-mvc/wfs-resources-system/
+
+# wfs-unified-login-protection
+# Add files below as you identify them:
+# https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/internal-mvc/wfs-unified-login-protection/
+
+# workflow-system
+# Add files below as you identify them:
+# https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/internal-mvc/workflow-system/
+
+# wp-mail-smtp
+# Add files below as you identify them:
+# https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/internal-mvc/wp-mail-smtp/

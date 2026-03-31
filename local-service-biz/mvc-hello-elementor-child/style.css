@@ -1,0 +1,214 @@
+/*
+Theme Name: MVC Hello Elementor Child
+Template: hello-elementor
+Description: Child theme for Hello Elementor
+Version: 1.0
+*/
+
+/* =============================================================================
+   LocalServiceBiz — Global Typography System
+   Child Theme: style.css
+   Fonts: Syne (headings) · DM Sans (body)
+   ============================================================================= */
+
+/* ── Section Labels (e.g. "WHY LOCALSERVICEBIZ") ───────────────────────────── */
+.lsb-slbl {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: #00C9A7 !important;
+  margin-bottom: 12px !important;
+}
+
+/* ── Section Headings (h2-level) ────────────────────────────────────────────── */
+.lsb-sh {
+  font-family: 'Syne', sans-serif !important;
+  font-size: 2.4rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.1 !important;
+  margin: 0 0 14px !important;
+}
+
+/* Light background variant */
+.lsb-sh--dark  { color: #0D1B2A !important; }
+
+/* Dark background variant */
+.lsb-sh--light { color: #ffffff !important; }
+
+/* ── Section Subheadings / Intro Text ───────────────────────────────────────── */
+.lsb-ssub {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 300 !important;
+  line-height: 1.8 !important;
+  max-width: 520px !important;
+  margin: 0 0 48px !important;
+}
+
+.lsb-ssub--dark  { color: #8A9BB0 !important; }
+.lsb-ssub--light { color: #ffffff !important; }
+
+/* ── Card Titles (h3-level) ─────────────────────────────────────────────────── */
+.lsb-ind-hero__h1,
+.lsb-ind-card__name,
+.lsb-why__title,
+.lsb-cta__title,
+.lsb-seo__title {
+  font-family: 'Syne', sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.15 !important;
+}
+
+/* Hero H1 */
+.lsb-ind-hero__h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem) !important;
+  color: #ffffff !important;
+}
+.lsb-ind-hero__h1 em {
+  font-style: normal !important;
+  color: #00C9A7 !important;
+}
+.lsb-ind-hero__h1 .h1-line1 {
+  display: block !important;
+  color: #ffffff !important;
+}
+
+/* Industry card name */
+.lsb-ind-card__name {
+  font-size: 1.25rem !important;
+  color: #0D1B2A !important;
+}
+
+/* Why section card titles */
+.lsb-why__title {
+  font-size: 1.2rem !important;
+  color: #ffffff !important;
+}
+
+/* CTA title */
+.lsb-cta__title {
+  font-size: clamp(1.8rem, 3vw, 2.6rem) !important;
+  color: #ffffff !important;
+}
+
+/* SEO block title */
+.lsb-seo__title {
+  font-size: 1.5rem !important;
+  color: #0D1B2A !important;
+}
+
+/* ── Body / Description Text ────────────────────────────────────────────────── */
+.lsb-ind-hero__sub,
+.lsb-ind-card__desc,
+.lsb-why__desc,
+.lsb-cta__sub,
+.lsb-seo__body p {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 300 !important;
+  line-height: 1.8 !important;
+}
+
+.lsb-ind-hero__sub  { font-size: 1.05rem !important; color: rgba(255,255,255,0.5) !important; }
+.lsb-ind-card__desc { font-size: 0.9rem !important;  color: #8A9BB0 !important; }
+.lsb-why__desc      { font-size: 0.9rem !important;  color: #ffffff !important; }
+.lsb-cta__sub       { font-size: 1rem !important;    color: #ffffff !important; }
+.lsb-seo__body p    { font-size: 0.92rem !important; color: #8A9BB0 !important; }
+.lsb-seo__body p strong { color: #1A2535 !important; font-weight: 500 !important; }
+
+/* ── Breadcrumb ─────────────────────────────────────────────────────────────── */
+.lsb-breadcrumb {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.82rem !important;
+  font-weight: 400 !important;
+}
+.lsb-breadcrumb a   { color: rgba(255,255,255,0.4) !important; }
+.lsb-bc-cur         { color: #00C9A7 !important; font-weight: 500 !important; }
+
+/* ── Stat Pills ─────────────────────────────────────────────────────────────── */
+.lsb-ind-hero__pill {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.85rem !important;
+  color: rgba(255,255,255,0.6) !important;
+}
+.lsb-ind-hero__pill strong {
+  font-weight: 600 !important;
+  color: #ffffff !important;
+}
+
+/* ── Hero Stat Bar (count-stats shortcode) ───────────────────────────────────  */
+.hs-num {
+  font-family: 'Syne', sans-serif !important;
+  font-size: 1.8rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1 !important;
+}
+.hs-label {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.75rem !important;
+  font-weight: 400 !important;
+  color: #8A9BB0 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+}
+
+/* =============================================================================
+   RESPONSIVE — Tablet (max 1024px)
+   ============================================================================= */
+@media (max-width: 1024px) {
+  .lsb-sh {
+    font-size: 2rem !important;
+  }
+  .lsb-ind-hero__h1 {
+    font-size: clamp(2rem, 4vw, 3rem) !important;
+  }
+  .lsb-cta__title {
+    font-size: 2rem !important;
+  }
+  .lsb-ind-hero__sub {
+    font-size: 1rem !important;
+  }
+}
+
+/* =============================================================================
+   RESPONSIVE — Mobile (max 768px)
+   ============================================================================= */
+@media (max-width: 768px) {
+  .lsb-sh {
+    font-size: 1.7rem !important;
+  }
+  .lsb-ind-hero__h1 {
+    font-size: clamp(1.8rem, 7vw, 2.4rem) !important;
+  }
+  .lsb-cta__title {
+    font-size: 1.6rem !important;
+  }
+  .lsb-why__title {
+    font-size: 1.1rem !important;
+  }
+  .lsb-ind-card__name {
+    font-size: 1.1rem !important;
+  }
+  .lsb-seo__title {
+    font-size: 1.2rem !important;
+  }
+  .lsb-ind-hero__sub {
+    font-size: 0.95rem !important;
+  }
+  .lsb-ssub {
+    font-size: 0.95rem !important;
+  }
+  .hs-num {
+    font-size: 1.4rem !important;
+  }
+  .hs-label {
+    font-size: 0.7rem !important;
+  }
+}
+

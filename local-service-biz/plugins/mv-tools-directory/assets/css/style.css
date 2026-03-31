@@ -1,0 +1,67 @@
+/* MV Tools Directory — Frontend Styles */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Outfit:wght@400;500;600&display=swap');
+
+:root {
+  --mvtd-green:       #1a6b4a; --mvtd-green-light: #e8f5ef; --mvtd-green-mid: #2d8c62;
+  --mvtd-ink:         #141414; --mvtd-muted: #6b7280;       --mvtd-border: #e4e4e0;
+  --mvtd-bg:          #f9f8f5; --mvtd-white: #ffffff;
+  --mvtd-blue:        #1a56db; --mvtd-blue-light: #ebf3ff;
+  --mvtd-amber:       #d97706; --mvtd-amber-light: #fef3c7;
+  --mvtd-radius:      16px;    --mvtd-radius-sm: 10px;
+  --mvtd-shadow:      0 1px 3px rgba(0,0,0,.06);
+  --mvtd-shadow-hover:0 8px 24px rgba(0,0,0,.09);
+}
+.mvtd-wrap { font-family:'Outfit',sans-serif;color:var(--mvtd-ink);max-width:1100px;margin:0 auto;padding:0 1rem 4rem; }
+.mvtd-hero { text-align:center;padding:3.5rem 1rem 2.5rem; }
+.mvtd-hero-tag { display:inline-flex;align-items:center;gap:6px;background:var(--mvtd-green-light);color:var(--mvtd-green);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:1.25rem; }
+.mvtd-hero-tag svg { stroke:var(--mvtd-green); }
+.mvtd-hero-title { font-family:'Fraunces',serif!important;font-size:clamp(1.8rem,4vw,2.8rem)!important;font-weight:600!important;line-height:1.15!important;color:var(--mvtd-ink)!important;margin:0 0 1rem!important;border:none!important;padding:0!important; }
+.mvtd-hero-sub { font-size:16px;color:var(--mvtd-muted);max-width:580px;margin:0 auto;line-height:1.7; }
+.mvtd-filters { display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:2.5rem; }
+.mvtd-filter-btn { padding:7px 18px;border-radius:100px;border:1px solid var(--mvtd-border);background:var(--mvtd-white);color:var(--mvtd-muted);font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;cursor:pointer;transition:all .18s; }
+.mvtd-filter-btn:hover { border-color:var(--mvtd-green);color:var(--mvtd-green); }
+.mvtd-filter-btn.active { background:var(--mvtd-green);border-color:var(--mvtd-green);color:var(--mvtd-white); }
+.mvtd-grid { display:grid;gap:1.25rem;margin-bottom:2rem; }
+.mvtd-cols-3 { grid-template-columns:repeat(3,1fr); }
+.mvtd-cols-2 { grid-template-columns:repeat(2,1fr); }
+.mvtd-cols-1 { grid-template-columns:1fr; }
+.mvtd-card { background:var(--mvtd-white);border:1px solid var(--mvtd-border);border-radius:var(--mvtd-radius);padding:1.5rem;display:flex;flex-direction:column;box-shadow:var(--mvtd-shadow);transition:box-shadow .2s,transform .2s,border-color .2s;position:relative;overflow:hidden; }
+.mvtd-card::before { content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--mvtd-green);opacity:0;transition:opacity .2s; }
+.mvtd-card:hover { box-shadow:var(--mvtd-shadow-hover);transform:translateY(-2px);border-color:#d4d4d0; }
+.mvtd-card:hover::before { opacity:1; }
+.mvtd-card.mvtd-coming-soon { opacity:.72; }
+.mvtd-card-top { display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1rem; }
+.mvtd-card-icon-wrap { width:44px;height:44px;background:var(--mvtd-green-light);border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+.mvtd-card-icon-wrap svg { width:22px;height:22px;stroke:var(--mvtd-green); }
+.mvtd-card-meta { display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-end; }
+.mvtd-badge { display:inline-block;font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:100px; }
+.mvtd-badge-green { background:var(--mvtd-green-light);color:var(--mvtd-green); }
+.mvtd-badge-blue  { background:var(--mvtd-blue-light);color:var(--mvtd-blue); }
+.mvtd-badge-amber { background:var(--mvtd-amber-light);color:var(--mvtd-amber); }
+.mvtd-badge-red   { background:#fef2f2;color:#991b1b; }
+.mvtd-card-content { flex:1;margin-bottom:1rem; }
+.mvtd-card-title { font-size:15px!important;font-weight:600!important;color:var(--mvtd-ink)!important;margin:0 0 .4rem!important;line-height:1.3!important;border:none!important;padding:0!important; }
+.mvtd-card-tagline { font-size:13px;color:var(--mvtd-muted);line-height:1.55;margin:0; }
+.mvtd-card-details { display:none;margin-bottom:1rem;border-top:1px solid var(--mvtd-border);padding-top:1rem;animation:mvtd-in .2s ease; }
+.mvtd-card-details.open { display:block; }
+@keyframes mvtd-in { from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)} }
+.mvtd-card-desc { font-size:13px;color:var(--mvtd-muted);line-height:1.65;margin:0 0 .9rem; }
+.mvtd-features { list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.4rem; }
+.mvtd-features li { font-size:12px;color:var(--mvtd-ink);display:flex;align-items:flex-start;gap:7px;line-height:1.5; }
+.mvtd-features li svg { stroke:var(--mvtd-green);flex-shrink:0;margin-top:2px; }
+.mvtd-card-footer { display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto; }
+.mvtd-expand-btn { display:flex;align-items:center;gap:5px;background:none;border:none;cursor:pointer;font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;color:var(--mvtd-muted);padding:0;transition:color .15s; }
+.mvtd-expand-btn:hover { color:var(--mvtd-green); }
+.mvtd-chevron { transition:transform .2s;flex-shrink:0; }
+.mvtd-expand-btn[aria-expanded="true"] .mvtd-chevron { transform:rotate(180deg); }
+.mvtd-launch-btn { display:inline-flex;align-items:center;gap:5px;padding:8px 16px;background:var(--mvtd-green);color:var(--mvtd-white)!important;border-radius:8px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;text-decoration:none!important;transition:background .15s;white-space:nowrap; }
+.mvtd-launch-btn:hover { background:var(--mvtd-green-mid);color:var(--mvtd-white)!important; }
+.mvtd-launch-btn svg { stroke:white; }
+.mvtd-coming-label { font-size:12px;color:var(--mvtd-muted);font-style:italic; }
+.mvtd-empty { text-align:center;padding:3rem 1rem;color:var(--mvtd-muted); }
+.mvtd-empty svg { display:block;margin:0 auto .75rem;opacity:.3; }
+.mvtd-empty p { font-size:14px; }
+.mvtd-footer { text-align:center;padding-top:2rem;border-top:1px solid var(--mvtd-border);font-size:12px;color:#bbb; }
+.mvtd-footer a { color:var(--mvtd-green);text-decoration:none; }
+@media(max-width:900px){.mvtd-cols-3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:580px){.mvtd-cols-3,.mvtd-cols-2{grid-template-columns:1fr;}.mvtd-hero{padding:2.5rem 0 2rem;}}

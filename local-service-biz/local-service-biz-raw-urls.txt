@@ -1,0 +1,75 @@
+# LOCAL SERVICE BIZ — Raw GitHub URLs
+# Repo: https://github.com/mediavinescorp/mvc-projects
+# Base: https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz
+
+# ============================================================
+# MVC HELLO ELEMENTOR CHILD THEME
+# ============================================================
+
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/functions.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/screenshot.png
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/style.css
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/template-city.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/template-city-industry.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/template-faq-single.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/template-industry.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/template-service.php
+
+# ── includes/ ────────────────────────────────────────────────────────────────
+
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/includes/acf-defaults.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/includes/acf-repeater-importer.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/includes/rewrite-rules.php
+
+# ── shortcodes/ ──────────────────────────────────────────────────────────────
+
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/business-badge-shortcode.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/business-results.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/cities-sections.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/city-business-results.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/city-industry-page.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/city-single-page.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/count-stats.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/faq-section.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/featured-businesses.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/featured-cities.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/general_cities.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/industries-grid.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/industries-hero.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/industries-sections.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/industry-service-filter.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/industry-single-page.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/local-businesses-page.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/lsb-badges.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/lsb-blog-section.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/lsb-city-search.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/lsb-featured-cities.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/lsb-icon-maps.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/lsb-industries-grid.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/lsb-search.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/service-single-page.php
+https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/mvc-hello-elementor-child/shortcodes/shortcodes-business.php
+
+# ============================================================
+# PLUGINS
+# ============================================================
+
+# ── mv-biolink ───────────────────────────────────────────────────────────────
+# Add files below as you identify them:
+# https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/plugins/mv-biolink/
+
+# ── mvc-directory-engine ─────────────────────────────────────────────────────
+# Add files below as you identify them:
+# https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/plugins/mvc-directory-engine/
+
+# ── mvc-taxonomy-importer ────────────────────────────────────────────────────
+# Add files below as you identify them:
+# https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/plugins/mvc-taxonomy-importer/
+
+# ── mv-review-generator ──────────────────────────────────────────────────────
+# Add files below as you identify them:
+# https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/plugins/mv-review-generator/
+
+# ── mv-tools-directory ───────────────────────────────────────────────────────
+# Add files below as you identify them:
+# https://raw.githubusercontent.com/mediavinescorp/mvc-projects/refs/heads/main/local-service-biz/plugins/mv-tools-directory/
